@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Tetris 2025</title>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5156494121502262" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         :root {
             --neon-blue: #00f2ff;
@@ -70,9 +75,32 @@
             transform: scale(0.95);
             background: rgba(255, 255, 255, 0.2);
         }
+
+        .ad-container {
+            min-height: 90px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+        }
     </style>
 </head>
 <body class="grid-bg">
+    <!-- Top Banner Ad -->
+    <div class="ad-container w-full max-w-[728px] mx-auto mt-4">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5156494121502262"
+             data-ad-slot="YOUR_BANNER_SLOT_ID"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
     <div class="min-h-screen flex flex-col items-center justify-center p-4 relative">
         <!-- Background Animation -->
         <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20"></div>
@@ -107,6 +135,15 @@
                         <div id="next-piece" class="bg-opacity-30 bg-gray-800 rounded"></div>
                     </div>
                     
+                    <!-- Side Banner Ad -->
+                    <div class="hidden md:block ad-container w-[300px] h-[250px]">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-5156494121502262"
+                             data-ad-slot="YOUR_SIDE_SLOT_ID"
+                             data-ad-format="rectangle"></ins>
+                    </div>
+                    
                     <!-- Mobile Controls -->
                     <div class="md:hidden flex flex-col gap-4 items-center">
                         <button id="rotate-btn" class="control-btn rounded-full w-16 h-16 text-white text-2xl flex items-center justify-center">
@@ -127,21 +164,15 @@
                 </div>
             </div>
         </div>
-
-        <!-- Ad Container -->
-        <div class="mt-8 w-full max-w-[728px] mx-auto glass-effect rounded-lg p-4">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
-                 data-ad-slot="YOUR_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
     </div>
 
     <script src="tetris.js"></script>
+    <script>
+        // Initialize ads
+        window.onload = function() {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        };
+    </script>
 </body>
 </html>
